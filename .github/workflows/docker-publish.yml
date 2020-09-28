@@ -14,6 +14,8 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
           registry: docker.pkg.github.com
           repository: solohin/mysql-ping/mysql-ping
-          tags: ${{ github.sha }}
+          tags: 
+            - ${{ github.sha }}
+            - latest
           path: ./
           cache_froms: docker.pkg.github.com/solohin/mysql-ping/mysql-ping:latest

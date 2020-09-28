@@ -1,0 +1,19 @@
+on:
+  - push
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Push to Docker Hub
+        uses: docker/build-push-action@v1
+        with:
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+          registry: docker.pkg.github.com
+          repository: solohin/mysql-ping/mysql-ping
+          tags: ${{ github.sha }}
+          path: ./
+          cache_froms: docker.pkg.github.com/solohin/mysql-ping/mysql-ping:latest

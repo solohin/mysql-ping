@@ -1,0 +1,23 @@
+{
+  "name": "mysql-ping",
+  "version": "1.0.0",
+  "description": "",
+  "main": "ping.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/solohin/mysql-ping.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/solohin/mysql-ping/issues"
+  },
+  "homepage": "https://github.com/solohin/mysql-ping#readme",
+  "dependencies": {
+    "delay": "^4.4.0",
+    "mysql": "^2.18.1"
+  }
+}

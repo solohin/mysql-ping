@@ -2,9 +2,9 @@ const { promises } = require('fs');
 const delay = require('delay')
 var mysql = require('mysql');
 var pool = mysql.createPool({
-    host: process.env.MYSQL_HOST || 'singlemysql',
+    host: process.env.MYSQL_HOST || 'cluster1-haproxy',
     user: process.env.MYSQL_USER || 'root',
-    password: process.env.MYSQL_PASSWORD || 'password',
+    password: process.env.MYSQL_PASSWORD || 'root_password',
 });
 
 let lastConnectionTs = 0

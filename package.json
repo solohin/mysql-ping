@@ -5,7 +5,8 @@
   "main": "ping.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ping.js"
+    "start": "node ping.js",
+    "tele": "telepresence --method inject-tcp"
   },
   "repository": {
     "type": "git",
@@ -19,6 +20,7 @@
   "homepage": "https://github.com/solohin/mysql-ping#readme",
   "dependencies": {
     "delay": "^4.4.0",
-    "mysql": "^2.18.1"
+    "mysql": "^2.18.1",
+    "random-words": "^1.1.1"
   }
 }
